@@ -13,15 +13,19 @@ namespace VehicleSummary.Api.Controllers
         {
             _vehicleSummaryService = vehicleSummaryService;
         }
-        
+
         // GET
+        /// <summary>
+        /// Get Vehicle Summary.
+        /// </summary>
+        /// <param name="make"></param>
+        /// <returns>Vehicle models and their no of available years</returns>
         [HttpGet]
         [Route("/vehicle-checks/makes/{make}")]
         public async Task<IActionResult> Makes(string make)
         {
             var response = await _vehicleSummaryService.GetSummaryByMake(make);
-            
-            return Ok(make);
+            return Ok(response);
         }
     }
 }
