@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Flurl.Http.Testing;
 using Newtonsoft.Json;
+using VehicleSummary.Api.Model;
 using VehicleSummary.Api.Services.VehicleSummary;
 using Xunit;
 using Xunit.Abstractions;
